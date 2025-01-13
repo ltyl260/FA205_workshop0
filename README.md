@@ -10,7 +10,9 @@ I decided to make a pond for my duck to float on, the challenge was to make a wa
 I used a quad to fill in the lower water  
 to trace the curve for the waves on the water I used a circle moving in the y axis with a sin function and from 0 to width in the x axis on a while loop.  
  // width of circle is 40px, want centre of circle to oscillate around height*0.8.   
- // i.e. speed*sin(x/20 - bob)+(height*0.8)  
+ // i.e. speed*sin(x/20 - bob)+(height*0.8)    
+ note: whats fun about a sin function is that while i need to reset the pondTrace to keep tracing it (this is only to meet the condidotions of the while loop).
+ for my bob variable i never have to reset it, because sin functions are continuous and have no limit as they trend towards infinity!      
 in the while loop I need to make sure to iterate the trace index otherwise the loop would be infinite.  
 When I exit the loop I need to reset the trace index to 0 so my sketch can adjust for the next iteration to give the illusion of movement.  
 I wanted to give an element of randomness to the ponds motion so my variable for speed id dictated by the rnadom function, giving teh duck a unique experience each time my sketch is loaded up.  
